@@ -69,6 +69,7 @@ class MuestraArrozController:
         """
         if humedad_grano < HUMEDAD_MINIMA_IDEAL:
             return "GRANO MUY SECO - RIESGO DE QUIEBRE"
-        if humedad_grano > HUMEDAD_MAXIMA_IDEAL:
+        elif humedad_grano > HUMEDAD_MAXIMA_IDEAL:
             return "ALERTA: RIESGO DE HONGOS"
-        return "HUMEDAD IDEAL PARA PILADO"
+        else:
+            return "HUMEDAD IDEAL PARA PILADO"
